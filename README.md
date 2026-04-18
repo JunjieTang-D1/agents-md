@@ -9,7 +9,7 @@
 
 ---
 
-## TL;DR
+## The Rules
 
 1. **Default to 3–5 agents.** Adding more hurts more than it helps.
 2. **One shared project directory with per-agent write scopes.** Per-agent folders produce zero deployable code.
