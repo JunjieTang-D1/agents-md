@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: "AGENTS.md: Operating Rules for Multi-Agent LLM Coding Teams"
+message: "If you use this work, please cite it as below."
+type: dataset
+authors:
+  - family-names: Tang
+    given-names: Junjie
+repository-code: "https://github.com/JunjieTang-D1/agents-md"
+url: "https://github.com/JunjieTang-D1/agents-md"
+abstract: >-
+  Five rules for multi-agent LLM coding teams, derived from 40 controlled
+  experiments across 13 configurations, 5 team topologies, 2 domains, and
+  2 model generations. Covers team size, directory structure, feedback
+  loops, deployment ownership, and reproducibility reporting.
+keywords:
+  - multi-agent-systems
+  - llm
+  - software-engineering
+  - operating-rules
+  - agent-coordination
+license: MIT
+version: "1.0"
+date-released: 2026-04-17
