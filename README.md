@@ -58,8 +58,6 @@ These domain packs have been tested in controlled experiments:
 | Domain | Agents | Output | Runs |
 |--------|:------:|--------|:----:|
 | Physical AI Factory | 5 | 80 files, 31K LOC mean, 92–99% pytest pass | N=3 |
-| Stripe Billing & Connect | 5 | Billing, Connect, webhooks platform | N=3 |
-| Healthcare (HIPAA Clinical AI) | 6 | FHIR, HealthLake, Guardrails, risk scoring | N=1 |
 
 ### As a contribution
 
