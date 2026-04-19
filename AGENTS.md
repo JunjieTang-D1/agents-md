@@ -2,9 +2,9 @@
 
 > **IMPORTANT NOTICE:** This project is NOT production-ready. It is provided strictly for testing, experimentation, and educational purposes only. This code has NOT undergone any security review and is NOT intended for deployment in production environments or for use with real end-users. Use at your own risk. No guarantees are made regarding security, reliability, availability, or fitness for any particular purpose.
 
-Five rules for multi-agent LLM coding teams. Derived from 40 controlled experiments across 13 configurations, 5 team topologies, 2 domains, and 2 model generations.
+Five rules for multi-agent LLM coding teams. Derived from 27 controlled experiments across 13 configurations, 5 team topologies, 2 domains, and 2 model generations.
 
-The evidence and reasoning behind each rule is in the companion blog post (link when published).
+The evidence and reasoning behind each rule is in the [companion blog post](https://junjietang.dev/blog/2026/five-rules-multi-agent-coding-teams/).
 
 **Tradeoff:** These rules bias toward structure over autonomy. For simple tasks, a single agent is fine.
 
@@ -90,4 +90,4 @@ Rules:
 
 ---
 
-*Built from AgentCorp: 40 experiments, 13 configurations, 5 team topologies, 2 domains, 2 model generations. The full framework and raw run artifacts will be released open-source soon.*
+*Built from AgentCorp: 27 experiments, 13 configurations, 5 team topologies, 2 domains, 2 model generations. The full framework and raw run artifacts will be released open-source soon.*

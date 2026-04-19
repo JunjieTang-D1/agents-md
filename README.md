@@ -2,10 +2,10 @@
 
 > **IMPORTANT NOTICE:** This project is NOT production-ready. It is provided strictly for testing, experimentation, and educational purposes only. This code has NOT undergone any security review and is NOT intended for deployment in production environments or for use with real end-users. Use at your own risk. No guarantees are made regarding security, reliability, availability, or fitness for any particular purpose.
 
-**Five rules for multi-agent LLM coding teams.** Derived from 40 controlled experiments.
+**Five rules for multi-agent LLM coding teams.** Derived from 27 controlled experiments.
 
 📄 **The rules:** [AGENTS.md](./AGENTS.md)
-📝 **The evidence:** companion blog post (link when published)
+📝 **The evidence:** [Five Rules for Multi-Agent Coding Teams — Derived From 27 Controlled Experiments](https://junjietang.dev/blog/2026/five-rules-multi-agent-coding-teams/)
 
 ---
 
@@ -52,5 +52,5 @@ https://github.com/JunjieTang-D1/agents-md
 
 ## Related
 
-- **Companion blog post:** Five Rules for Multi-Agent Coding Teams (link when published)
+- **Companion blog post:** [Five Rules for Multi-Agent Coding Teams](https://junjietang.dev/blog/2026/five-rules-multi-agent-coding-teams/)
 - **Experimental framework (AgentCorp):** to be released open-source soon
