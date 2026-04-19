@@ -14,7 +14,7 @@ The evidence and reasoning behind each rule is in the [companion blog post](http
 
 **Default to 3–5 agents. Add more only when measurement says you need to.**
 
-In 36 baseline runs, 5-agent teams scored 14% higher than 10-agent teams on LLM-judged artifact quality (7.60 vs 6.64 on a 10-point scale). The gap widened with project complexity.
+In 18 baseline runs, 5-agent teams scored 14% higher than 10-agent teams on LLM-judged artifact quality (7.60 vs 6.64 on a 10-point scale). The gap widened with project complexity.
 
 Why: a single agent holds the full project in its context window. Split that context across N agents and you're compressing understanding. Every delegation drops signal. Coordination overhead grows faster than output.
 
@@ -87,6 +87,85 @@ Rules:
 **These rules are working if:** every run produces a repo you can `git clone && make build && docker run`, test counts are stable across runs, and you're not debugging coordination failures between agents.
 
 **These rules fail if:** your task fits in a single agent's context window. Then just use one agent and skip the overhead.
+
+---
+
+## 6. Define Your Team in Markdown, Not Code
+
+**One directory per domain. Five markdown files. Zero code changes to add a new team.**
+
+The first five rules tell you *what* works. This section tells you *how* to configure it. A **domain pack** is a directory with five files that fully define a multi-agent team and its project:
+
+```
+domains/your-project/
+  DOMAIN.md    # Mission, context, sprint config, success criteria
+  TEAM.md      # Agents: roles, models, write scopes, responsibilities
+  STORIES.md   # User stories with acceptance criteria
+  RULES.md     # Coding rules per module path
+  PLAN.md      # Daily plan — phases and per-day assignments
+```
+
+Creating a new domain = copy the template directory + edit the markdown. No Python, no YAML escaping, no config parser changes.
+
+**Why markdown, not YAML/JSON:**
+- Humans read it naturally. LLMs parse it natively.
+- Diffs are reviewable. PRs make sense.
+- No escaping hell for multi-line strings.
+- Extensible — add sections without breaking parsers.
+
+**TEAM.md** is where the five rules become concrete:
+
+```markdown
+# Team Configuration
+
+## Defaults
+- **Planner model:** opus
+- **Worker model:** sonnet
+- **Judge model:** opus
+
+## chief_planner
+- **Role:** Platform Architect
+- **Type:** planner
+- **Write Scope:** docs/, planning/
+- **Reports To:** none
+- **Responsibilities:**
+  - Decompose project into phases and assign work
+  - Track cross-agent dependencies
+  - Review judge feedback and adjust plan
+
+## backend_dev
+- **Role:** Backend Engineer
+- **Type:** worker
+- **Write Scope:** src/backend/, tests/test_backend.py
+- **Reports To:** chief_planner
+- **Responsibilities:**
+  - Implement API endpoints and business logic
+  - Write unit and integration tests
+
+## devops_engineer
+- **Role:** DevOps & Deployment Engineer
+- **Type:** worker
+- **Write Scope:** Dockerfile, Makefile, src/main.py, pyproject.toml, .github/
+- **Reports To:** chief_planner
+- **Responsibilities:**
+  - Own all deployment artifacts (Rule 4)
+  - Wire modules into entry point
+
+## judge
+- **Role:** Quality Assurance Judge
+- **Type:** judge
+- **Write Scope:** docs/GATE_REVIEW.md, docs/FINAL_REVIEW.md
+- **Responsibilities:**
+  - Evaluate at mid-sprint and end-of-sprint
+  - Score each agent on 5 pillars
+```
+
+Notice how Rules 1–5 are encoded directly:
+- 4 agents (Rule 1)
+- Write scopes enforce isolation (Rule 2)
+- PLAN.md injects nightly test failures (Rule 3)
+- DevOps agent owns deployment (Rule 4)
+- Run the domain pack N≥2 times (Rule 5)
 
 ---
 

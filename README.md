@@ -27,11 +27,27 @@ The field doesn't lack demos. It lacks *operating rules* — the load-bearing de
 
 ## How to use
 
+### Define your team
+
+Copy [`examples/minimal-team/`](./examples/minimal-team/) and edit the five markdown files to match your domain. No code changes needed.
+
+```
+your-domain/
+  DOMAIN.md    # What you're building
+  TEAM.md      # Who's on the team (roles, write scopes, models)
+  STORIES.md   # What they're building (user stories)
+  RULES.md     # How they should write code (per-module rules)
+  PLAN.md      # When they do it (daily phases)
+```
+
+See [Rule 6 in AGENTS.md](./AGENTS.md#6-define-your-team-in-markdown-not-code) for the format specification.
+
 ### In your own project
 
 1. Adopt the five rules as-is, or fork them.
 2. Copy [AGENTS.md](./AGENTS.md) to the root of your multi-agent project.
-3. Enforce the rules at the tool layer (write scopes, nightly tests, DevOps ownership), not just by prompt convention.
+3. Create a domain pack for your project using the template above.
+4. Enforce the rules at the tool layer (write scopes, nightly tests, DevOps ownership), not just by prompt convention.
 
 ### As a contribution
 
