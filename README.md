@@ -6,7 +6,7 @@
 
 📄 **The rules:** [AGENTS.md](./AGENTS.md)
 📝 **The evidence:** [Five Rules for Multi-Agent Coding Teams — Derived From 27 Controlled Experiments](https://junjietang.dev/blog/2026/five-rules-multi-agent-coding-teams/)
-🏢 **The framework:** [AgentCorp](https://github.com/JunjieTang-D1/agentcorp) — the experimental platform behind the rules
+🏢 **The framework:** Coming soon
 
 ---
 
@@ -53,7 +53,7 @@ See [Rule 6 in AGENTS.md](./AGENTS.md#6-define-your-team-in-markdown-not-code) f
 
 ### Tested domains
 
-These domain packs have been run through the [AgentCorp](https://github.com/JunjieTang-D1/agentcorp) framework:
+These domain packs have been tested in controlled experiments:
 
 | Domain | Agents | Output | Runs |
 |--------|:------:|--------|:----:|
@@ -92,5 +92,4 @@ https://github.com/JunjieTang-D1/agents-md
 ## Related
 
 - **Companion blog post:** [Five Rules for Multi-Agent Coding Teams](https://junjietang.dev/blog/2026/five-rules-multi-agent-coding-teams/)
-- **Experimental framework:** [AgentCorp](https://github.com/JunjieTang-D1/agentcorp) — multi-day autonomous sprints with hierarchical LLM agent teams
 - **Built with:** [AWS Strands Agents SDK](https://github.com/strands-agents/sdk-python) + [Amazon Bedrock](https://aws.amazon.com/bedrock/)
